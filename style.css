@@ -1,0 +1,439 @@
+/* =========================================================
+   MITRA RENTCAR AMBON — style.css
+   Design tokens: putih (white), ungu (purple), hitam (black)
+   Signature motif: "garis rute" — dashed route line that runs
+   through the page, nodding to island road trips across Ambon.
+   ========================================================= */
+
+:root {
+    --white: #ffffff;
+    --ink: #0b0710;
+    /* warm near-black */
+    --ink-soft: #171022;
+    --purple-900: #3b0764;
+    --purple-700: #5b21b6;
+    --purple-600: #7c3aed;
+    --purple-500: #9d5cf5;
+    --lavender-50: #f6f3fc;
+    --lavender-100: #ede7fb;
+    --stone-600: #55505c;
+    --stone-400: #8b8494;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--stone-600);
+}
+
+.font-display {
+    font-family: 'Sora', sans-serif;
+}
+
+.font-utility {
+    font-family: 'Space Grotesk', monospace;
+    letter-spacing: 0.14em;
+}
+
+/* ---------- Navbar ---------- */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(59, 7, 100, 0.08);
+}
+
+.glass-nav.is-scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 8px 30px -12px rgba(59, 7, 100, 0.18);
+}
+
+/* ---------- Hero ---------- */
+.hero-overlay {
+    background:
+        linear-gradient(180deg, rgba(11, 7, 16, 0.55) 0%, rgba(11, 7, 16, 0.35) 45%, rgba(11, 7, 16, 0.85) 100%),
+        linear-gradient(115deg, rgba(59, 7, 100, 0.75) 0%, rgba(11, 7, 16, 0.35) 60%);
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(6px);
+}
+
+/* ---------- Signature: Route Line ---------- */
+/* A dashed "road" that threads between sections with a pin that
+   drifts along it — the throughline of a road-trip brand. */
+.route-divider {
+    position: relative;
+    height: 90px;
+    overflow: hidden;
+}
+
+.route-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.route-path {
+    fill: none;
+    stroke: var(--purple-500);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 2 14;
+    opacity: 0.55;
+}
+
+.route-pin {
+    transform-origin: center;
+    animation: drivePin 7s ease-in-out infinite;
+}
+
+@keyframes drivePin {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+.route-pin-el {
+    offset-path: path('M 0 45 C 150 5, 350 85, 500 45 S 850 5, 1000 45');
+    animation: drivePin 8s linear infinite;
+}
+
+/* ---------- Cards & Motion ---------- */
+.hover-float {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.hover-float:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px -20px rgba(59, 7, 100, 0.28);
+    border-color: rgba(124, 58, 237, 0.35);
+}
+
+.fleet-card {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fleet-card:hover .fleet-img {
+    transform: scale(1.06);
+}
+
+.fleet-img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-tile img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.gallery-tile:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+
+/* ---------- Fade-in on scroll ---------- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger>* {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger.is-visible>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger.is-visible>*:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.stagger.is-visible>*:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.stagger.is-visible>*:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.stagger.is-visible>*:nth-child(4) {
+    transition-delay: 0.35s;
+}
+
+.stagger.is-visible>*:nth-child(5) {
+    transition-delay: 0.45s;
+}
+
+.stagger.is-visible>*:nth-child(6) {
+    transition-delay: 0.55s;
+}
+
+/* ---------- Misc ---------- */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.text-gradient-purple {
+    background: linear-gradient(100deg, #d4bbfb 0%, #ffffff 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.wa-float {
+    animation: floatPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatPulse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .fade-in-section,
+    .stagger>*,
+    .route-pin-el,
+    .wa-float,
+    .hover-float,
+    .fleet-img,
+    .gallery-tile img {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .fade-in-section,
+    .stagger>* {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ---------- Hero parallax hook (transform set via JS) ---------- */
+#home>.absolute.inset-0.z-0>img {
+    transition: transform 0.1s linear;
+    will-change: transform;
+}
+
+/* ---------- Star rating picker ---------- */
+.star-picker {
+    color: #e4dcf5;
+}
+
+.star-btn {
+    color: #e4dcf5;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+    line-height: 1;
+}
+
+.star-btn:hover {
+    transform: scale(1.18) rotate(-4deg);
+}
+
+.star-btn.is-active,
+.star-btn.is-hover {
+    color: var(--purple-600);
+}
+
+.star-btn.is-active {
+    transform: scale(1.05);
+}
+
+/* ---------- Review cards ---------- */
+.review-card {
+    background: var(--white);
+    border: 1px solid var(--lavender-100);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+    animation: reviewIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reviewIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.review-avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--purple-600), var(--purple-900));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ---------- Ripple buttons ---------- */
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+    transform: scale(0);
+    animation: rippleAnim 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(2.6);
+        opacity: 0;
+    }
+}
+
+/* ---------- Toast ---------- */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 20px);
+    background: var(--ink);
+    color: #fff;
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 80;
+}
+
+.toast i {
+    color: #4ade80;
+}
+
+.toast.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+/* ---------- Count-up ---------- */
+.count-up {
+    display: inline-block;
+}
+
+/* ---------- Review photo upload preview ---------- */
+.photo-thumb {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    border: 1px solid var(--lavender-100);
+    animation: reviewIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.photo-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-thumb .photo-remove {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(11, 7, 16, 0.75);
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ---------- Photos & video inside a submitted review card ---------- */
+.review-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.review-photos img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-photos img:hover {
+    transform: scale(1.06);
+}
+
+.review-video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--purple-600);
+    border: 1px solid var(--lavender-100);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    transition: background 0.25s ease;
+}
+
+.review-video-badge:hover {
+    background: var(--lavender-50);
+}
