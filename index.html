@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra Rentcar Ambon | Rental Mobil di Ambon Murah & Terpercaya</title>
+    <meta name="description"
+        content="Mitra Rentcar Ambon — rental mobil di Ambon terpercaya. Sewa mobil harian, mingguan, bulanan, lepas kunci atau dengan sopir. Armada Innova, Avanza, Alphard, Pajero & Hiace siap pakai 24 jam.">
+    <meta name="keywords"
+        content="rental mobil ambon, rental mobil di ambon, rental di ambon, ambon rental, sewa mobil ambon, penyewaan mobil ambon, rental mobil lepas kunci ambon, rental mobil dengan sopir ambon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mitrarentcarambon.com/">
+    <meta name="geo.placename" content="Ambon, Maluku">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Mitra Rentcar Ambon | Rental Mobil di Ambon Murah & Terpercaya">
+    <meta property="og:description"
+        content="Sewa mobil harian, mingguan, bulanan, lepas kunci atau dengan sopir di Ambon. Armada lengkap, siap 24 jam.">
+    <meta property="og:image" content="bg.jpeg">
+    <meta property="og:locale" content="id_ID">
+
+    <link rel="icon" href="img/logo3.png" type="image/jpeg">
+
+    <!-- Google Fonts: display (Sora), body (Inter), utility (Space Grotesk) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f3fc',
+                            100: '#ede7fb',
+                            300: '#c7a4fa',
+                            500: '#9d5cf5',
+                            DEFAULT: '#5b21b6',
+                            dark: '#3b0764',
+                        },
+                        ink: '#0b0710',
+                        surface: '#f6f3fc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Sora', 'sans-serif'],
+                        utility: ['Space Grotesk', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRental",
+      "name": "Mitra Rentcar Ambon",
+      "image": "bg.jpeg",
+      "telephone": "+6281377334121",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Ambon"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ambon",
+        "addressRegion": "Maluku",
+        "addressCountry": "ID"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "url": "https://www.mitrarentcarambon.com/"
+    }
+    </script>
+</head>
+
+<body class="font-sans text-stone-600 bg-white antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 flex items-center">
+                    <img src="img/logo3.png" alt="Logo Mitra Rentcar Ambon"
+                        class="w-11 h-11 rounded-lg object-cover mr-3 ring-1 ring-brand/15">
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-xl text-ink leading-none">MITRA</span>
+                        <span
+                            class="font-utility text-[10px] text-brand font-medium leading-none mt-1 uppercase">Rentcar
+                            Ambon</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="font-medium text-ink hover:text-brand transition-colors">Home</a>
+                    <a href="#tentang" class="font-medium text-stone-600 hover:text-brand transition-colors">Tentang
+                        Kami</a>
+                    <a href="#layanan" class="font-medium text-stone-600 hover:text-brand transition-colors">Layanan</a>
+                    <a href="#armada" class="font-medium text-stone-600 hover:text-brand transition-colors">Armada</a>
+                    <a href="#galeri" class="font-medium text-stone-600 hover:text-brand transition-colors">Galeri</a>
+                    <a href="#ulasan" class="font-medium text-stone-600 hover:text-brand transition-colors">Ulasan</a>
+                    <a href="#kontak" class="font-medium text-stone-600 hover:text-brand transition-colors">Kontak</a>
+                    <a href="https://wa.me/6281377334121?text="
+                        target="_blank" rel="noopener"
+                        class="bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-md font-semibold transition-colors shadow-sm">
+                        Booking Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+                        class="text-ink hover:text-brand focus:outline-none p-2">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-brand-100 absolute w-full shadow-xl transition-all duration-300">
+            <div class="px-4 pt-4 pb-6 space-y-1">
+                <a href="#home"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-ink hover:bg-brand-50 hover:text-brand">Home</a>
+                <a href="#tentang"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-stone-600 hover:bg-brand-50 hover:text-brand">Tentang
+                    Kami</a>
+                <a href="#layanan"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-stone-600 hover:bg-brand-50 hover:text-brand">Layanan</a>
+                <a href="#armada"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-stone-600 hover:bg-brand-50 hover:text-brand">Armada</a>
+                <a href="#galeri"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-stone-600 hover:bg-brand-50 hover:text-brand">Galeri</a>
+                <a href="#ulasan"
+                    class="block px-4 py-3 rounded-lg text-base font-medium text-stone-600 hover:bg-brand-50 hover:text-brand">Ulasan</a>
+                <a href="https://wa.me/6281377334121?text="
+                    target="_blank" rel="noopener"
+                    class="block w-full text-center mt-4 bg-brand text-white px-4 py-3.5 rounded-lg font-semibold">
+                    Booking Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="relative pt-20 min-h-[92vh] flex items-end pb-24">
+        <div class="absolute inset-0 z-0 bg-ink">
+            <img src="img/bg.jpeg" alt="Rental mobil di Ambon - armada Mitra Rentcar Ambon"
+                class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <span
+                    class="hero-badge inline-flex items-center gap-2 py-1.5 px-4 rounded-full text-white text-sm font-utility mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-300 animate-pulse"></span> BUKA 24 JAM · AMBON, MALUKU
+                </span>
+
+                <h1 class="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
+                    Rental Mobil di Ambon,<br class="hidden md:block"> <span class="text-gradient-purple">Nyaman &amp;
+                        Terpercaya</span>
+                </h1>
+
+                <p class="text-lg text-white/80 mb-10 leading-relaxed max-w-xl font-light">
+                    <strong class="text-white font-semibold">Mitra Rentcar Ambon</strong> jadi teman perjalanan Anda —
+                    dari urusan dinas hingga jelajah pantai. Sewa mobil harian, mingguan, atau bulanan, lepas kunci
+                    maupun dengan sopir berpengalaman.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#armada"
+                        class="bg-brand hover:bg-brand-dark text-white text-center px-8 py-4 rounded-md font-semibold text-lg transition-colors">
+                        Lihat Pilihan Armada
+                    </a>
+                    <a href="https://wa.me/6281377334121?text="
+                        target="_blank" rel="noopener"
+                        class="bg-white hover:bg-brand-50 text-ink text-center px-8 py-4 rounded-md font-semibold text-lg transition-colors flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-2 text-[#25D366]"></i> Hubungi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <div class="bg-ink py-6 fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white"><span class="count-up"
+                        data-target="10" data-suffix="+">0</span></p>
+                <p class="font-utility text-[11px] text-brand-300 uppercase mt-1">Tahun Melayani</p>
+            </div>
+            <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white"><span class="count-up"
+                        data-target="6">0</span></p>
+                <p class="font-utility text-[11px] text-brand-300 uppercase mt-1">Pilihan Armada</p>
+            </div>
+            <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white"><span class="count-up"
+                        data-target="24">0</span></p>
+                <p class="font-utility text-[11px] text-brand-300 uppercase mt-1">Jam Siap Sedia</p>
+            </div>
+            <div>
+                <p class="font-display text-2xl md:text-3xl font-bold text-white"><span class="count-up"
+                        data-target="100" data-suffix="%">0</span></p>
+                <p class="font-utility text-[11px] text-brand-300 uppercase mt-1">Harga Transparan</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signature route divider -->
+    <div class="route-divider bg-white" aria-hidden="true">
+        <svg viewBox="0 0 1000 90" preserveAspectRatio="none">
+            <path class="route-path" d="M 0 45 C 150 5, 350 85, 500 45 S 850 5, 1000 45" />
+        </svg>
+        <div class="route-pin-el" style="position:absolute; top:0; left:0;">
+            <i class="fa-solid fa-location-dot text-brand text-xl"></i>
+        </div>
+    </div>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="pb-24 bg-white fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-brand-50 rounded-2xl transform translate-x-4 translate-y-4 -z-10">
+                    </div>
+                    <img src="img/g2.jpeg" alt="Layanan penyewaan mobil Mitra Rentcar Ambon"
+                        class="relative rounded-2xl object-cover w-full h-[450px]">
+
+                    <div class="absolute -bottom-6 -left-6 bg-brand p-6 rounded-xl shadow-xl text-white">
+                        <p class="font-display font-bold text-3xl">10+</p>
+                        <p class="text-sm text-brand-100 font-medium">Tahun Pengalaman</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-brand font-utility uppercase text-sm mb-2">Tentang Kami</h4>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight">
+                        Partner Perjalanan Anda di Ambon
+                    </h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        <strong class="text-ink">Mitra Rentcar Ambon</strong> berdedikasi memberikan layanan rental
+                        mobil terbaik di Maluku. Kami memahami waktu dan kenyamanan adalah hal berharga bagi setiap
+                        perjalanan Anda.
+                    </p>
+                    <p class="mb-10 text-lg leading-relaxed">
+                        Setiap unit melalui pengecekan kebersihan dan mesin secara rutin. Baik untuk perjalanan dinas
+                        maupun wisata keluarga, kami pastikan perjalanan Anda di Ambon bebas hambatan.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand text-lg"></i>
+                            <span class="font-medium text-ink">Unit Bersih &amp; Wangi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand text-lg"></i>
+                            <span class="font-medium text-ink">Harga Transparan</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand text-lg"></i>
+                            <span class="font-medium text-ink">Dukungan 24 Jam</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-brand text-lg"></i>
+                            <span class="font-medium text-ink">Sopir Profesional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Memilih Kami -->
+    <section class="py-24 bg-ink fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-brand-300 font-utility uppercase text-sm mb-2">Keunggulan Layanan</h4>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">Mengapa Memilih Kami?</h2>
+                <p class="text-white/60 text-lg">Kami fokus pada kemudahan sistem, kualitas unit, dan kenyamanan
+                    pengguna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+                <div class="bg-ink-soft bg-white/5 p-8 rounded-xl border border-white/10 text-center hover-float">
+                    <div
+                        class="w-14 h-14 bg-brand/20 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-300">
+                        <i class="fa-solid fa-car-rear text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-3">Armada Lengkap</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Pilihan komplit dari city car, MPV keluarga, hingga
+                        SUV dan minibus.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 text-center hover-float">
+                    <div
+                        class="w-14 h-14 bg-brand/20 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-300">
+                        <i class="fa-solid fa-wallet text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-3">Harga Terjangkau</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Tarif bersaing, dapat disesuaikan dengan durasi dan
+                        kebutuhan Anda.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 text-center hover-float">
+                    <div
+                        class="w-14 h-14 bg-brand/20 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-300">
+                        <i class="fa-solid fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-3">Sopir Berpengalaman</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Driver ramah, hafal medan jalan Maluku, siap jadi
+                        pemandu arah.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 text-center hover-float">
+                    <div
+                        class="w-14 h-14 bg-brand/20 rounded-lg flex items-center justify-center mx-auto mb-6 text-brand-300">
+                        <i class="fa-solid fa-handshake-angle text-2xl"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-3">Sistem Mudah</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Pemesanan via WhatsApp yang cepat, ringkas, dan
+                        anti ribet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="layanan" class="py-24 bg-surface fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h4 class="text-brand font-utility uppercase text-sm mb-2">Layanan Kami</h4>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ink">Fleksibel Sesuai Kebutuhan</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+                <div class="bg-white p-7 rounded-xl border border-brand-100 hover-float">
+                    <i class="fa-solid fa-calendar-day text-brand text-2xl mb-4"></i>
+                    <h3 class="font-display font-bold text-ink mb-2">Sewa Harian</h3>
+                    <p class="text-sm">Untuk keperluan singkat, dinas, atau jalan-jalan di sekitar Ambon.</p>
+                </div>
+                <div class="bg-white p-7 rounded-xl border border-brand-100 hover-float">
+                    <i class="fa-solid fa-calendar-week text-brand text-2xl mb-4"></i>
+                    <h3 class="font-display font-bold text-ink mb-2">Mingguan &amp; Bulanan</h3>
+                    <p class="text-sm">Tarif lebih hemat untuk kebutuhan perjalanan jangka panjang.</p>
+                </div>
+                <div class="bg-white p-7 rounded-xl border border-brand-100 hover-float">
+                    <i class="fa-solid fa-key text-brand text-2xl mb-4"></i>
+                    <h3 class="font-display font-bold text-ink mb-2">Lepas Kunci</h3>
+                    <p class="text-sm">Kendarai sendiri dengan bebas, kapan pun dan ke mana pun Anda mau.</p>
+                </div>
+                <div class="bg-white p-7 rounded-xl border border-brand-100 hover-float">
+                    <i class="fa-solid fa-id-card-clip text-brand text-2xl mb-4"></i>
+                    <h3 class="font-display font-bold text-ink mb-2">Dengan Sopir</h3>
+                    <p class="text-sm">Duduk santai, biar sopir profesional kami yang mengantar Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Armada -->
+    <section id="armada" class="py-24 bg-white fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h4 class="text-brand font-utility uppercase text-sm mb-2">Katalog Kendaraan</h4>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-ink">Pilihan Armada Rental Mobil Ambon
+                    </h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+
+                <!-- Innova Reborn -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Populer</span>
+                        <img src="img/G7.jpeg" alt="Sewa Toyota Innova Reborn di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Innova Reborn</h3>
+                        <p class="text-sm text-stone-400 mb-4">Nyaman untuk keluarga &amp; perjalanan dinas</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> </span>
+                            <span class="flex items-center"><i class="fa-solid fa-gauge-high text-brand mr-2"></i>
+                                Diesel</span>
+                                <br>
+                                <span class="flex items-center"><i class="fa-solid fa-gas-pump text-brand mr-2"></i>
+                                    Bensin</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Innova Zenix -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Terbaru</span>
+                        <img src="img/bg.jpeg" alt="Sewa Toyota Innova Zenix di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Innova Zenix</h3>
+                        <p class="text-sm text-stone-400 mb-4">Generasi terbaru, kabin lebih lega &amp; halus</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> 
+                                </span>
+                            <span class="flex items-center"><i class="fa-solid fa-snowflake text-brand mr-2"></i> </span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avanza -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Hemat</span>
+                        <img src="img/g1.jpeg" alt="Sewa Toyota Avanza di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Avanza</h3>
+                        <p class="text-sm text-stone-400 mb-4">Pilihan ekonomis untuk mobilitas harian</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> 
+                                </span>
+                            <span class="flex items-center"><i class="fa-solid fa-gas-pump text-brand mr-2"></i>
+                                Bensin</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alphard -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Premium</span>
+                        <img src="img/g3.jpeg" alt="Sewa Toyota Alphard di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Alphard</h3>
+                        <p class="text-sm text-stone-400 mb-4">Kemewahan untuk tamu VIP &amp; acara khusus</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> </span>
+                            <span class="flex items-center"><i class="fa-solid fa-crown text-brand mr-2"></i>
+                                Eksklusif</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pajero -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Tangguh</span>
+                        <img src="img/g6.jpeg" alt="Sewa Mitsubishi Pajero Sport di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Pajero Sport</h3>
+                        <p class="text-sm text-stone-400 mb-4">SUV tangguh untuk medan berat &amp; luar kota</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> </span>
+                            <span class="flex items-center"><i class="fa-solid fa-mountain text-brand mr-2"></i> 4x2 /
+                                4x4</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hiace -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Rombongan</span>
+                        <img src="img/g2.jpeg" alt="Sewa Toyota Hiace di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Hiace</h3>
+                        <p class="text-sm text-stone-400 mb-4">Ideal untuk rombongan &amp; perjalanan grup</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-users text-brand mr-2"></i> </span>
+                            <span class="flex items-center"><i class="fa-solid fa-van-shuttle text-brand mr-2"></i>
+                                Minibus</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fortuner -->
+                <div class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Rombongan</span>
+                        <img src="img/g4.jpeg" alt="Sewa Toyota Fortuner di Ambon" class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Fortuner</h3>
+                        <p class="text-sm text-stone-400 mb-4">Ideal untuk rombongan &amp; perjalanan grup</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                            <span class="flex items-center"><i class="fa-solid fa-gas-pump text-brand mr-2"></i>
+                                Bensin</span>
+                            <span class="flex items-center"><i class="fa-solid fa-gauge-high text-brand mr-2"></i>
+                                    Diesel</span>
+                        </div>
+                        <a href="https://wa.me/6281377334121?text=" target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HRV -->
+                <div class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Rombongan</span>
+                        <img src="img/g9.jpeg" alt="Sewa HRV di Ambon" class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">HRV</h3>
+                        <p class="text-sm text-stone-400 mb-4">Ideal untuk rombongan &amp; perjalanan grup</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                        </div>
+                        <a href="https://wa.me/6281377334121?text=" target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Expander -->
+                <div class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Rombongan</span>
+                        <img src="img/g8.jpeg" alt="Sewa Toyota Expander di Ambon" class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Expander</h3>
+                        <p class="text-sm text-stone-400 mb-4">Ideal untuk rombongan &amp; perjalanan grup</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                        </div>
+                        <a href="https://wa.me/6281377334121?text=" target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rush -->
+                <div
+                    class="fleet-card bg-white rounded-xl border border-brand-100 shadow-sm hover-float overflow-hidden flex flex-col">
+                    <div class="h-52 bg-brand-50 overflow-hidden relative">
+                        <span
+                            class="absolute top-3 left-3 z-10 bg-ink/80 text-white text-xs font-utility uppercase px-3 py-1 rounded-full">Rombongan</span>
+                        <img src="img/g5.jpeg" alt="Sewa Toyota Rush di Ambon"
+                            class="fleet-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-display text-xl font-bold text-ink mb-1">Toyota Rush</h3>
+                        <p class="text-sm text-stone-400 mb-4">Ideal untuk rombongan &amp; perjalanan grup</p>
+                        <div class="flex justify-between items-center text-sm mb-6 pb-6 border-b border-brand-50">
+                        </div>
+                        <a href="https://wa.me/6281377334121?text="
+                            target="_blank" rel="noopener"
+                            class="block w-full py-3 border-2 border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md text-center transition-colors mt-auto">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-24 bg-surface fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/3 flex flex-col text-center lg:text-left">
+                    <h4 class="text-brand font-utility uppercase text-sm mb-2">Portfolio Kami</h4>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-6">Galeri Pelayanan</h2>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        Dokumentasi penyerahan kendaraan dan pelayanan harian kami kepada klien yang mencari rental
+                        mobil lepas kunci atau dengan sopir di Ambon.
+                    </p>
+                </div>
+
+                <div class="lg:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 stagger">
+                    <div class="gallery-tile overflow-hidden rounded-xl border border-white cursor-pointer">
+                        <img src="img/g1.jpeg" alt="Galeri layanan Mitra Rentcar Ambon 1"
+                            class="w-full h-full object-cover aspect-[4/3]">
+                    </div>
+                    <div class="gallery-tile overflow-hidden rounded-xl border border-white cursor-pointer">
+                        <img src="img/g2.jpeg" alt="Galeri layanan Mitra Rentcar Ambon 2"
+                            class="w-full h-full object-cover aspect-[4/3]">
+                    </div>
+                    <div class="gallery-tile overflow-hidden rounded-xl border border-white cursor-pointer">
+                        <img src="img/g3.jpeg" alt="Galeri layanan Mitra Rentcar Ambon 3"
+                            class="w-full h-full object-cover aspect-[4/3]">
+                    </div>
+                    <div class="gallery-tile overflow-hidden rounded-xl border border-white cursor-pointer">
+                        <img src="img/g4.jpeg" alt="Galeri layanan Mitra Rentcar Ambon 4"
+                            class="w-full h-full object-cover aspect-[4/3]">
+                    </div>
+                    <div
+                        class="gallery-tile overflow-hidden rounded-xl border border-white cursor-pointer col-span-2 md:col-span-1">
+                        <img src="img/g5.jpeg" alt="Galeri layanan Mitra Rentcar Ambon 5"
+                            class="w-full h-full object-cover aspect-[4/3]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ulasan -->
+    <section id="ulasan" class="py-24 bg-white fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <h4 class="text-brand font-utility uppercase text-sm mb-2">Kata Pelanggan</h4>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-4">Rating &amp; Ulasan</h2>
+                <p class="text-lg">Ceritakan pengalaman Anda menyewa mobil bersama kami — ulasan Anda membantu pelanggan
+                    lain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+                <!-- Ringkasan rating -->
+                <div class="lg:col-span-2">
+                    <div class="bg-surface rounded-2xl border border-brand-100 p-8 text-center lg:sticky lg:top-28">
+                        <p class="font-display text-5xl font-bold text-ink" id="avg-rating">5.0</p>
+                        <div class="flex justify-center gap-1 my-3 text-brand text-xl" id="avg-stars"
+                            aria-hidden="true"></div>
+                        <p class="text-sm text-stone-400 mb-8" id="review-count">Berdasarkan 0 ulasan</p>
+
+                        <form id="review-form" class="text-left space-y-4">
+                            <div>
+                                <label for="review-name" class="block text-sm font-medium text-ink mb-1">Nama
+                                    Anda</label>
+                                <input id="review-name" name="name" type="text" required placeholder="cth. Budi Santoso"
+                                    class="w-full px-4 py-3 rounded-lg border border-brand-100 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition">
+                            </div>
+
+                            <div>
+                                <span class="block text-sm font-medium text-ink mb-1">Rating Anda</span>
+                                <div class="star-picker flex gap-1 text-2xl" id="star-picker" role="radiogroup"
+                                    aria-label="Pilih rating bintang">
+                                    <button type="button" class="star-btn" data-value="1" aria-label="1 bintang"><i
+                                            class="fa-solid fa-star"></i></button>
+                                    <button type="button" class="star-btn" data-value="2" aria-label="2 bintang"><i
+                                            class="fa-solid fa-star"></i></button>
+                                    <button type="button" class="star-btn" data-value="3" aria-label="3 bintang"><i
+                                            class="fa-solid fa-star"></i></button>
+                                    <button type="button" class="star-btn" data-value="4" aria-label="4 bintang"><i
+                                            class="fa-solid fa-star"></i></button>
+                                    <button type="button" class="star-btn" data-value="5" aria-label="5 bintang"><i
+                                            class="fa-solid fa-star"></i></button>
+                                </div>
+                                <input type="hidden" id="review-rating" value="0">
+                            </div>
+
+                            <div>
+                                <label for="review-text" class="block text-sm font-medium text-ink mb-1">Ulasan
+                                    Anda</label>
+                                <textarea id="review-text" name="text" rows="4" required
+                                    placeholder="Bagaimana pengalaman Anda?"
+                                    class="w-full px-4 py-3 rounded-lg border border-brand-100 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition resize-none"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-ink mb-1">Foto (opsional, maks. 4)</label>
+                                <input type="file" id="review-photo-input" accept="image/*" multiple class="hidden">
+                                <button type="button" id="review-photo-btn"
+                                    class="w-full py-2.5 border border-dashed border-brand-300 text-brand text-sm font-medium rounded-lg hover:bg-brand-50 transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-camera"></i> Tambah Foto
+                                </button>
+                                <div id="review-photo-preview" class="flex flex-wrap gap-2 mt-3"></div>
+                            </div>
+
+                            <div>
+                                <label for="review-video" class="block text-sm font-medium text-ink mb-1">Link Video
+                                    (opsional)</label>
+                                <input id="review-video" name="video" type="url"
+                                    placeholder="Tempel link video: YouTube, Instagram, TikTok, dll."
+                                    class="w-full px-4 py-3 rounded-lg border border-brand-100 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition">
+                                <p class="text-xs text-stone-400 mt-1">Punya video pengalaman naik mobil kami? Upload
+                                    dulu ke YouTube/IG/TikTok, lalu tempel link-nya di sini.</p>
+                            </div>
+
+                            <button type="submit"
+                                class="ripple-btn w-full py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-lg transition-colors relative overflow-hidden">
+                                Kirim Ulasan
+                            </button>
+                            <p class="text-xs text-stone-400 text-center">Ulasan tersimpan di perangkat ini sebagai
+                                riwayat lokal.</p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Daftar ulasan -->
+                <div class="lg:col-span-3">
+                    <div id="review-list" class="space-y-5"></div>
+                    <p id="review-empty"
+                        class="text-center text-stone-400 py-16 border border-dashed border-brand-100 rounded-2xl">
+                        Belum ada ulasan. Jadilah yang pertama membagikan pengalaman Anda!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-ink text-white/60 pt-20 pb-8 border-t-4 border-brand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="/img/logo.png" alt="Logo Mitra Rentcar Ambon"
+                            class="w-11 h-11 rounded-lg object-cover mr-3 ring-1 ring-white/10">
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-white leading-none">MITRA</span>
+                            <span
+                                class="font-utility text-[10px] text-brand-300 font-medium leading-none mt-1 uppercase">Rentcar
+                                Ambon</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Penyedia jasa <strong class="text-white">rental mobil di Ambon</strong>. Solusi transportasi
+                        dengan armada bersih, sistem mudah, dan pelayanan profesional.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"
+                            class="w-9 h-9 rounded bg-white/5 flex items-center justify-center hover:bg-brand text-white transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"
+                            class="w-9 h-9 rounded bg-white/5 flex items-center justify-center hover:bg-brand text-white transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener" aria-label="TikTok"
+                            class="w-9 h-9 rounded bg-white/5 flex items-center justify-center hover:bg-brand text-white transition-colors"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h3 class="font-display text-lg font-bold text-white mb-6">Hubungi Kami</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp text-brand-300 mt-1"></i>
+                            <div>
+                                <p class="text-white/40 mb-1">WhatsApp / Telepon</p>
+                                <a href="tel:+6281377334121"
+                                    class="text-white hover:text-brand-300 font-medium">0813-7733-4121</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-regular fa-envelope text-brand-300 mt-1"></i>
+                            <div>
+                                <p class="text-white/40 mb-1">Email</p>
+                                <!-- Ganti dengan email resmi Anda -->
+                                <a href="mailto:info@mitrarentcarambon.com"
+                                    class="text-white hover:text-brand-300 font-medium">info@mitrarentcarambon.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Lokasi -->
+                <div>
+                    <h3 class="font-display text-lg font-bold text-white mb-6">Lokasi</h3>
+                    <div class="flex items-start gap-3 mb-4 text-sm">
+                        <i class="fa-solid fa-location-dot text-brand-300 mt-1"></i>
+                        <!-- Ganti dengan alamat lengkap toko/kantor Anda -->
+                        <p class="text-white/60 leading-relaxed">Ambon, Maluku</p>
+                    </div>
+                    <a href="https://maps.google.com/?q=Ambon+Maluku" target="_blank" rel="noopener"
+                        class="inline-block text-sm text-brand-300 hover:text-white transition-colors border-b border-brand-300 pb-1">
+                        Buka di Google Maps <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Navigasi -->
+                <div>
+                    <h3 class="font-display text-lg font-bold text-white mb-6">Navigasi</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-brand-300 transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-brand-300 transition-colors">Tentang Kami</a></li>
+                        <li><a href="#armada" class="hover:text-brand-300 transition-colors">Armada</a></li>
+                        <li><a href="#galeri" class="hover:text-brand-300 transition-colors">Galeri</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-medium">
+                <p class="mb-2 md:mb-0">&copy; 2026 Mitra Rentcar Ambon. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281377334121?text="
+        target="_blank" rel="noopener" aria-label="Chat WhatsApp"
+        class="wa-float fixed bottom-6 right-6 z-[60] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[70] bg-ink/90 items-center justify-center p-6 flex">
+        <button id="lightbox-close" aria-label="Tutup"
+            class="absolute top-6 right-6 text-white text-3xl hover:text-brand-300"><i
+                class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-text">Ulasan terkirim, terima kasih!</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
